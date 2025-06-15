@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,14 +25,14 @@
 
     .overlay {
       z-index: 2;
-      height: 100vh;
+      height: 80vh;
       width: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 30px;
+      padding: 20px;
       position: relative;
     }
 
@@ -56,7 +57,7 @@
       25%   { content: "💓 My heart speaks your name in every silence."; }
       50%   { content: "💌 Distance can't break us. It only makes me miss you more."; }
       75%   { content: "🌙 Agar Baat na ho jaan , tu apna khyal rakhna ...chahe kuchh ho jaaye, mujhe apne paas rakhna."; }
-      100%  { content: "💭 Each second without you is like a lifetime of missing."; }
+      100%  { content: "💭Tere bina ye wakt bada lagta hai, tu ho to sab achha lagta hai. ❤️"; }
     }
 
     .slideshow {
@@ -76,22 +77,22 @@
     }
 
     @keyframes slideFade {
-      0%   { content: url('https://images.unsplash.com/photo-1532635245-4b90c5f89f61'); }
-      25%  { content: url('https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e'); }
-      50%  { content: url('https://images.unsplash.com/photo-1500648767791-00dcc994a43e'); }
-      75%  { content: url('https://images.unsplash.com/photo-1517841905240-472988babdf9'); }
-      100% { content: url('https://images.unsplash.com/photo-1532635245-4b90c5f89f61'); }
+      0%   { content: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKRvB1c4TY3QVhB3wb0ZpHFyPHv82wxMc1HaalsdeO5SALML97Ui4B6pU&s=10'); }
+      25%  { content: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTolxz8oB_PKbIsZDGEUBbE37Ev3OGfcCakZt9sHg_NiM5ZF301A_Jvsyk&s=10'); }
+      50%  { content: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvJB6u-jhIMtFFlaSZeSXOVLKpgAUAesyEbOBZHrLaemFuVKDWhZJshwun&s=10'); }
+      75%  { content: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcBYonrfJDmN8an2_aSwoH_2Mr3iJzCdjNCJScIgcdlecXX6SW5X3v7ma_&s=10'); }
+      100% { content: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQd71wdc0CHPlLdEu2nfpAFfvUls71FwGGo9d-fC9ZDWUijc-o08pPSMAI&s=10'); }
     }
 
     .floating-name {
       position: absolute;
-      top: 20%;
-      left: 10%;
+      top: 10%;
+      left: 5%;
       font-size: 1.5em;
       font-weight: bold;
       color: #ff87b2;
       animation: floatAround 18s infinite linear;
-      z-index: 3;
+      z-index: 1;
     }
 
     @keyframes floatAround {
@@ -190,10 +191,18 @@
       0% { transform: translateY(-100px); opacity: 0; }
       100% { transform: translateY(100vh); opacity: 1; }
     }
+    #a{
+      margin: 20px;
+      position: relative;
+      top: 30px 20px;
+      color: aqua;
+      transition: ease-in-out;
+      text-shadow: 2px;
+    }
   </style>
 </head>
 <body>
-
+<h1 id="a">Meri Jaan Bhul Mat Jaiha Ho🥹🥹</h1>
   <!-- Background Music -->
   <audio autoplay loop>
     <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
@@ -213,16 +222,16 @@
 
   <!-- Main Love Content -->
   <div class="overlay">
-    <h1>💼 Hrishi's Heart Profile</h1>
+    <h1>Oyee Jaan Bahut Yaad Aawat Baadu Ho</h1>
     <p style="font-size: 1.2em;">Currently Missing: <strong> Meri Jaan (Nandini 💖)</strong></p>
 
     <div class="slideshow">
-      <img src="https://images.unsplash.com/photo-1532635245-4b90c5f89f61" alt="Love Slide">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKRvB1c4TY3QVhB3wb0ZpHFyPHv82wxMc1HaalsdeO5SALML97Ui4B6pU&s=10" alt="Love Slide">
     </div>
 
     <div class="quote-text"></div>
     <div class="emoji">💘 💫 💕 💭</div>
-    <div class="floating-name">💞 Nandini 💞</div>
+    <div class="floating-name">💞 Nandini My Love 💞</div>
 
     <button class="btn" onclick="showSurprise()">Click for a Surprise 💌</button>
     <div class="surprise" id="surpriseText">Tu thodi Pagal hai Meri Jaan , Par Aap meri Jaan hai......nhi nhi Pyari si jaan 😘😘🥰. 💖</div>
