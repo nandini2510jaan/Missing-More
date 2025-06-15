@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Missing You Nandini - Hrishi's Heart</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                  url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') no-repeat center center fixed;
+      background-size: cover;
+      overflow: hidden;
+      position: relative;
+      color: white;
+    }
+
+    .overlay {
+      z-index: 2;
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 30px;
+      position: relative;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    .quote-text::before {
+      content: "💭 Each second without you is like a lifetime of missing.";
+      animation: quoteChange 24s infinite;
+      font-size: 1.5em;
+      font-style: italic;
+      max-width: 700px;
+      display: block;
+      margin: 20px auto;
+    }
+
+    @keyframes quoteChange {
+      0%    { content: "💭 tohre bina wakt ka gujara na ho rahal ba ...Tohre yaad me abkhiya ro rahal ba"; }
+      25%   { content: "💓 My heart speaks your name in every silence."; }
+      50%   { content: "💌 Distance can't break us. It only makes me miss you more."; }
+      75%   { content: "🌙 Agar Baat na ho jaan , tu apna khyal rakhna ...chahe kuchh ho jaaye, mujhe apne paas rakhna."; }
+      100%  { content: "💭 Each second without you is like a lifetime of missing."; }
+    }
+
+    .slideshow {
+      width: 300px;
+      height: 300px;
+      border-radius: 20px;
+      overflow: hidden;
+      margin: 20px auto;
+      box-shadow: 0 0 20px rgba(255,255,255,0.3);
+    }
+
+    .slideshow img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      animation: slideFade 24s infinite;
+    }
+
+    @keyframes slideFade {
+      0%   { content: url('https://images.unsplash.com/photo-1532635245-4b90c5f89f61'); }
+      25%  { content: url('https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e'); }
+      50%  { content: url('https://images.unsplash.com/photo-1500648767791-00dcc994a43e'); }
+      75%  { content: url('https://images.unsplash.com/photo-1517841905240-472988babdf9'); }
+      100% { content: url('https://images.unsplash.com/photo-1532635245-4b90c5f89f61'); }
+    }
+
+    .floating-name {
+      position: absolute;
+      top: 20%;
+      left: 10%;
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #ff87b2;
+      animation: floatAround 18s infinite linear;
+      z-index: 3;
+    }
+
+    @keyframes floatAround {
+      0%   { transform: translate(0, 0); }
+      25%  { transform: translate(300px, 50px); }
+      50%  { transform: translate(200px, 200px); }
+      75%  { transform: translate(-100px, 100px); }
+      100% { transform: translate(0, 0); }
+    }
+
+    .emoji {
+      font-size: 2em;
+      animation: floatEmoji 6s infinite ease-in-out;
+    }
+
+    @keyframes floatEmoji {
+      0%   { transform: translateY(0); }
+      50%  { transform: translateY(-15px); }
+      100% { transform: translateY(0); }
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 20px;
+      font-size: 0.9em;
+      color: #ccc;
+    }
+
+    .btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 1.1em;
+      background-color: #ff69b4;
+      border: none;
+      color: white;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s ease;
+      box-shadow: 0 0 15px rgba(255,255,255,0.3);
+    }
+
+    .btn:hover {
+      background-color: #ff1493;
+    }
+
+    .surprise {
+      margin-top: 15px;
+      font-size: 1.3em;
+      font-weight: bold;
+      color: #ffd1dc;
+      display: none;
+    }
+
+    .firefly {
+      position: absolute;
+      background: #fffacd;
+      border-radius: 50%;
+      width: 5px;
+      height: 5px;
+      opacity: 0.8;
+      animation: twinkle 2s infinite alternate ease-in-out;
+    }
+
+    @keyframes twinkle {
+      0% { opacity: 0.2; transform: scale(1); }
+      100% { opacity: 1; transform: scale(1.5); }
+    }
+
+    .firefly:nth-child(1) { top: 10%; left: 20%; animation-delay: 0s; }
+    .firefly:nth-child(2) { top: 40%; left: 70%; animation-delay: 1s; }
+    .firefly:nth-child(3) { top: 60%; left: 30%; animation-delay: 2s; }
+    .firefly:nth-child(4) { top: 80%; left: 80%; animation-delay: 3s; }
+    .firefly:nth-child(5) { top: 25%; left: 50%; animation-delay: 1.5s; }
+    .firefly:nth-child(6) { top: 70%; left: 10%; animation-delay: 2.5s; }
+
+    /* Rain */
+    .rain {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .raindrop {
+      position: absolute;
+      width: 2px;
+      height: 20px;
+      background: rgba(255,255,255,0.4);
+      animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(-100px); opacity: 0; }
+      100% { transform: translateY(100vh); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Music -->
+  <audio autoplay loop>
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
+    <!-- You can replace the above link with a romantic Bollywood song mp3 URL -->
+  </audio>
+
+  <!-- Fireflies -->
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+  <div class="firefly"></div>
+
+  <!-- Rain -->
+  <div class="rain" id="rain"></div>
+
+  <!-- Main Love Content -->
+  <div class="overlay">
+    <h1>💼 Hrishi's Heart Profile</h1>
+    <p style="font-size: 1.2em;">Currently Missing: <strong> Meri Jaan (Nandini 💖)</strong></p>
+
+    <div class="slideshow">
+      <img src="https://images.unsplash.com/photo-1532635245-4b90c5f89f61" alt="Love Slide">
+    </div>
+
+    <div class="quote-text"></div>
+    <div class="emoji">💘 💫 💕 💭</div>
+    <div class="floating-name">💞 Nandini 💞</div>
+
+    <button class="btn" onclick="showSurprise()">Click for a Surprise 💌</button>
+    <div class="surprise" id="surpriseText">Tu thodi Pagal hai Meri Jaan , Par Aap meri Jaan hai......nhi nhi Pyari si jaan 😘😘🥰. 💖</div>
+
+    <div class="footer">Made with ❤️ by Hrishi | Forever in Love with My Love Nandini</div>
+  </div>
+
+  <script>
+    // Surprise messages
+    function showSurprise() {
+      const surprise = document.getElementById('surpriseText');
+      surprise.style.display = 'block';
+      surprise.innerHTML = getRandomSurprise();
+    }
+
+    function getRandomSurprise() {
+      const messages = [
+        "You are the reason I believe in forever. 💖",
+        "Every heartbeat echoes your name. 💘",
+        "You're the sunshine to my soul. ☀️",
+        "Tere bina ye wakt bada lagta hai, tu ho to sab achha lagta hai. ❤️",
+        "You're not just on my mind — you're inside my soul. 🌹",
+        "Baat na ho to jaan , tu apna khyal rakhna "<br>"+ chahe kuchh ho jaaye, mujhe apne paas rakhna",
+        "I Love You My SweetBaby😘😘😘"
+      ];
+      return messages[Math.floor(Math.random() * messages.length)];
+    }
+
+    // Generate rain drops
+    const rain = document.getElementById('rain');
+    for (let i = 0; i < 80; i++) {
+      const drop = document.createElement('div');
+      drop.className = 'raindrop';
+      drop.style.left = Math.random() * 100 + 'vw';
+      drop.style.animationDuration = (0.5 + Math.random()) + 's';
+      drop.style.animationDelay = Math.random() + 's';
+      rain.appendChild(drop);
+    }
+  </script>
+</body>
+</html>
